@@ -9,6 +9,12 @@ int main(int argc, char* argv[])
 
 	QGuiApplication app(argc, argv);
 
+	app.setProperty("SQLdbc_server", "this");
+	app.setProperty("SQLdbc_database", "should");
+	app.setProperty("SQLdbc_dbUserLogin", "noy");
+	app.setProperty("SQLdbc_dbUserPassword", "be");
+	app.setProperty("SQLdbc_appUserLogin", "needed");
+	app.setProperty("SQLdbc_appName", ":[");
 	app.setProperty("SQLdbc_sqlitePath", QDir::currentPath());
 
 	QQmlApplicationEngine engine;
