@@ -1,3 +1,5 @@
+#include <QDebug>
+#include <QDir>
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
@@ -6,6 +8,8 @@ int main(int argc, char* argv[])
 	QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
 	QGuiApplication app(argc, argv);
+
+	app.setProperty("SQLdbc_sqlitePath", QDir::currentPath());
 
 	QQmlApplicationEngine engine;
 	engine.addImportPath("./imports");

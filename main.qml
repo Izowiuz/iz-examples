@@ -7,14 +7,20 @@ import IzSQLTableView 1.0
 ApplicationWindow {
 	id: window
 	visible: true
-	width: 640
-	height: 480
+	width: 940
+	height: 680
 	title: qsTr("Hello :]")
 
 	IzSQLTableView {
+		id: sqlTV
+
 		anchors {
 			fill: parent
 			margins: 10
+		}
+
+		Component.onCompleted: {
+			sqlTV.model.source.sqlQuery = "SELECT * FROM customers;";
 		}
 	}
 }
