@@ -21,8 +21,6 @@ find_package(Qt5 COMPONENTS Core Quick REQUIRED)
 
 find_package(IzModels CONFIG REQUIRED)
 
-find_package(IzSettings CONFIG REQUIRED)
-
 add_executable(
 		${PROJECT_NAME}
 		"main.cpp"
