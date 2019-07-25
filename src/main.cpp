@@ -1,6 +1,4 @@
-#include <QDebug>
-#include <QDir>
-#include <QGuiApplication>
+﻿#include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
 int main(int argc, char* argv[])
@@ -9,16 +7,9 @@ int main(int argc, char* argv[])
 
 	QGuiApplication app(argc, argv);
 
-	app.setProperty("SQLdbc_server", "this");
-	app.setProperty("SQLdbc_database", "should");
-	app.setProperty("SQLdbc_dbUserLogin", "noy");
-	app.setProperty("SQLdbc_dbUserPassword", "be");
-	app.setProperty("SQLdbc_appUserLogin", "needed");
-	app.setProperty("SQLdbc_appName", ":[");
-	app.setProperty("SQLdbc_sqlitePath", QDir::currentPath());
-
 	QQmlApplicationEngine engine;
 	engine.addImportPath("./imports");
+	engine.addImportPath(DEV_PLUGINS_PATH);
 
 	const QUrl url(QStringLiteral("qrc:/src/QML/MainWindow.qml"));
 
