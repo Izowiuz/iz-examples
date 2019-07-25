@@ -8,6 +8,16 @@ IzSQLTableView {
 	id: sqlTV
 	objectName: "IzTableView"
 
+	// avaiable types are: "SQLITE", "MSSQL", "PSQL"
+	databaseType: "SQLITE"
+
+	connectionParameters: {
+		"path": "path/to/db/location",
+//		"path": "F:/git/iz-examples/db",
+		"database": "database_file_name"
+//		"database": "localdb.sqlite"
+	}
+
 	Component.onCompleted: {
 		sqlTV.model.source.sqlQuery = "SELECT * FROM customers;";
 	}
