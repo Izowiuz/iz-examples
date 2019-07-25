@@ -40,6 +40,8 @@ target_link_libraries(
     PRIVATE
         Qt5::Core
         Qt5::Quick
+        IzModels::IzModels
+        IzSQLUtilities::IzSQLUtilities
 )
 
 add_custom_target(finish_build ALL)

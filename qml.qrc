@@ -4,6 +4,7 @@
         <file>src/QML/MainWindow.qml</file>
         <file>src/QML/Pages/ListView.qml</file>
         <file>src/QML/Pages/TableView.qml</file>
-        <file>src/QML/Pages/ExampleSelector.qml</file>
+        <file>src/QML/Widgets/ExampleListViewDelegateA.qml</file>
+        <file>src/QML/Widgets/ExampleListViewDelegateB.qml</file>
     </qresource>
 </RCC>

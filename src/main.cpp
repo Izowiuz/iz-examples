@@ -1,8 +1,16 @@
 ﻿#include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
+#include "IzModels/VariantListModel.h"
+#include "IzSQLUtilities/SQLListModel.h"
+#include "IzSQLUtilities/SQLTableModel.h"
+
 int main(int argc, char* argv[])
 {
+	qmlRegisterType<IzModels::VariantListModel>("Custom.Models", 1, 0, "VariantListModel");
+	qmlRegisterType<IzSQLUtilities::SQLListModel>("Custom.Models", 1, 0, "SQLListModel");
+	qmlRegisterType<IzSQLUtilities::SQLTableModel>("Custom.Models", 1, 0, "SQLTableModel");
+
 	QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
 	QGuiApplication app(argc, argv);

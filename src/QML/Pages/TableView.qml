@@ -8,14 +8,14 @@ IzSQLTableView {
 	id: sqlTV
 	objectName: "IzTableView"
 
-	// avaiable types are: "SQLITE", "MSSQL", "PSQL"
-	databaseType: "SQLITE"
+	// avaiable names are: "SQLITE", "MSSQL", "PSQL"
+	databaseName: "SQLITE"
 
 	connectionParameters: {
-		"path": "path/to/db/location",
-//		"path": "F:/git/iz-examples/db",
-		"database": "database_file_name"
-//		"database": "localdb.sqlite"
+//		"path": "path/to/db/location",
+		"path": "F:/git/iz-examples/db",
+//		"database": "database_file_name"
+		"database": "localdb.sqlite"
 	}
 
 	Component.onCompleted: {
